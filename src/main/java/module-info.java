@@ -5,4 +5,6 @@ module appli.todolistfx {
 
     opens appli.todolistfx to javafx.fxml;
     exports appli.todolistfx;
+    exports appli.todolistfx.accueil;
+    opens appli.todolistfx.accueil to javafx.fxml;
 }
