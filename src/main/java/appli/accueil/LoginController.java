@@ -43,8 +43,10 @@ public class LoginController {
         String password =  motDePasseField.getText();
         if(email.isEmpty() || password.isEmpty()) {
            error.setText("Veuillez remplir tous les champs");
-        }else if (password){
-
+        }else if (password.equals("Azerty1234") && email.equals("a@a.a")){
+            error.setText("Connexion réussie");
+        }else{
+            error.setText("Il y a un problème quelque part");
         }
 
     }

@@ -20,6 +20,7 @@ public class StartApplication extends Application {
     public static void changeScene(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource(fxml));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        mainStage.setScene(scene);
     }
 
     public static void main(String[] args) {
