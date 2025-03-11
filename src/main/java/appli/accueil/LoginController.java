@@ -7,6 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class LoginController {
 
     @FXML
@@ -31,7 +33,7 @@ public class LoginController {
     private Label motDePasseOublie;
 
     @FXML
-    void btnInscription (ActionEvent event) {
+    void onInscriptionButtonClick (ActionEvent event) throws IOException {
         StartApplication.changeScene("accueil/inscription");
     }
 

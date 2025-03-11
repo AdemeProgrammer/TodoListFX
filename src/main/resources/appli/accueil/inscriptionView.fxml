@@ -7,19 +7,25 @@
 <?import javafx.scene.text.Font?>
 
 
-<Pane prefHeight="298.0" prefWidth="191.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.InscriptionController">
+<Pane prefHeight="630.0" prefWidth="191.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.InscriptionController">
    <children>
-      <Label layoutX="21.0" layoutY="22.0" text="Page d'inscription">
+      <Label layoutX="21.0" layoutY="88.0" text="Page d'inscription">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="79.0" layoutY="71.0" text="email" />
-      <TextField fx:id="emailField" layoutX="18.0" layoutY="88.0" />
-      <Label layoutX="58.0" layoutY="121.0" text="mot de passe" />
-      <TextField fx:id="motDePasseField" layoutX="18.0" layoutY="152.0" />
-      <Label fx:id="error" layoutX="62.0" layoutY="188.0" text="Label error" textFill="RED" />
-      <Button fx:id="btnInscription" layoutX="60.0" layoutY="224.0" mnemonicParsing="false" text="S'inscrire" />
-      <Button fx:id="btnConnexion" layoutX="55.0" layoutY="259.0" mnemonicParsing="false" text="Connexion" />
+      <Label layoutX="69.0" layoutY="218.0" text="prenom" />
+      <TextField fx:id="nomField" layoutX="21.0" layoutY="178.0" />
+      <Label layoutX="78.0" layoutY="153.0" text="nom" />
+      <TextField fx:id="prenomField" layoutX="21.0" layoutY="243.0" />
+      <Label layoutX="79.0" layoutY="280.0" text="email" />
+      <TextField fx:id="emailField" layoutX="21.0" layoutY="307.0" />
+      <Label layoutX="60.0" layoutY="340.0" text="mot de passe" />
+      <TextField fx:id="motDePasseField" layoutX="21.0" layoutY="365.0" />
+      <Label layoutX="57.0" layoutY="402.0" text="Confirmation" />
+      <TextField fx:id="confirmationField" layoutX="21.0" layoutY="433.0" />
+      <Label fx:id="error" layoutX="66.0" layoutY="469.0" text="Label error" textFill="RED" />
+      <Button fx:id="btnInscription" layoutX="64.0" layoutY="513.0" mnemonicParsing="false" onAction="#onSInscrireButtonClick" text="S'inscrire" />
+      <Button fx:id="btnConnexion" layoutX="57.0" layoutY="554.0" mnemonicParsing="false" onAction="#onIConnexionButtonClick" text="Connexion" />
    </children>
 </Pane>
