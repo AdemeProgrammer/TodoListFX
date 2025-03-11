@@ -1,10 +1,13 @@
 package appli.accueil;
 
+import appli.StartApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class InscriptionController {
 
@@ -33,8 +36,8 @@ public class InscriptionController {
     private TextField prenomField;
 
     @FXML
-    void onIConnexionButtonClick(ActionEvent event) {
-
+    void onIConnexionButtonClick(ActionEvent event) throws IOException {
+        StartApplication.changeScene("accueil/login");
     }
 
     @FXML
