@@ -1,4 +1,4 @@
-package appli.todolistfx;
+package appli;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +15,11 @@ public class StartApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+    }
+
+    public static void changeScene(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource(fxml));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
     }
 
     public static void main(String[] args) {
