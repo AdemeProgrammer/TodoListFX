@@ -7,12 +7,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import model.Utilisateur;
-
+import repository.UtilisateurRepository;
+import model.Utilisateur;
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class LoginController {
+    private UtilisateurRepository repo= new UtilisateurRepository();
 
     @FXML
     private Button btnConnexion;
@@ -48,10 +50,18 @@ public class LoginController {
         String password =  motDePasseField.getText();
         if(email.isEmpty() || password.isEmpty()) {
            error.setText("Veuillez remplir tous les champs");
-        }else if (password.equals("Azerty1234") && email.equals("a@a.a")){
-            error.setText("Connexion réussie");
         }else{
-            error.setText("Il y a un problème quelque part");
+            Utilisateur user = repo.getUtilisateurParEmail(email);
+            if (user == null) {
+                error.setText("Les informations fournies ne vous permettent pas de vous identifier !");
+
+            }else if (!user.getMotDePasse().equals(password)) {
+                error.setText("Veuillez remplir tous les champs");
+            }else {
+                error.setText("Connexion réussie !");
+                System.out.println("Connexion réussie");
+                System.out.println("Petite redirection des familles...");
+            }
         }
 
     }
