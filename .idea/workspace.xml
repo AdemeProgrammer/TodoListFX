@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="276031f1-2f0d-48f4-ad58-fd5f1cef2466" name="Changes" comment="[feat/fix]fix change set + inscription fonctionnelle" />
+    <list default="true" id="276031f1-2f0d-48f4-ad58-fd5f1cef2466" name="Changes" comment="[feat]Ajout d'un lien d'inscription vers connexion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +81,20 @@
       <recent name="appli.todolistfx.accueil" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.appli.StartApplication">
+  <component name="RunManager" selected="Application.Database">
+    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="database.Database" />
+      <module name="TodoListFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InscriptionController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="appli.todolistfx.accueil.InscriptionController" />
       <module name="TodoListFX" />
@@ -118,6 +136,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Database" />
         <item itemvalue="Application.appli.StartApplication" />
         <item itemvalue="Application.StartApplication" />
         <item itemvalue="Application.InscriptionController" />
@@ -143,7 +162,10 @@
       <workItem from="1741266848912" duration="5290000" />
       <workItem from="1741272174762" duration="6147000" />
       <workItem from="1741678756167" duration="7453000" />
-      <workItem from="1741708751545" duration="938000" />
+      <workItem from="1741708751545" duration="1237000" />
+      <workItem from="1742028010259" duration="53000" />
+      <workItem from="1742028817014" duration="2020000" />
+      <workItem from="1742283793452" duration="1239000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] Avancement dans le projet">
       <option name="closed" value="true" />
@@ -177,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741709144607</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[feat]Ajout d'un lien d'inscription vers connexion">
+      <option name="closed" value="true" />
+      <created>1741709957381</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1741709957381</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +218,8 @@
     <MESSAGE value="[ix] Correction login error label" />
     <MESSAGE value="[feat] Mise en place de l'inscription" />
     <MESSAGE value="[feat/fix]fix change set + inscription fonctionnelle" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat/fix]fix change set + inscription fonctionnelle" />
+    <MESSAGE value="[feat]Ajout d'un lien d'inscription vers connexion" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat]Ajout d'un lien d'inscription vers connexion" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
