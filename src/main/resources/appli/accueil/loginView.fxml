@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane prefHeight="486.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.LoginController">
    <children>
       <Label layoutX="74.0" layoutY="69.0" text="Bienvenue !" textFill="#434343">
@@ -21,8 +20,8 @@
       <TextField fx:id="motDePasseField" layoutX="58.0" layoutY="250.0" />
       <Label fx:id="error" layoutX="85.0" layoutY="295.0" text="Label pour erreur" textFill="#ff1500" />
    
-          <Button fx:id="btnInscription" layoutX="97.0" layoutY="329.0" onAction="#onInscriptionButtonClick" text="Inscription" />
-       <Button fx:id="btnConnexion" layoutX="97.0" layoutY="377.0" onAction="#onLoginButtonClick" text="Connexion" />
+          <Button fx:id="btnInscription" layoutX="97.0" layoutY="329.0" onAction="#onSInscrireButtonClick" text="Inscription" />
+       <Button fx:id="btnConnexion" layoutX="97.0" layoutY="377.0" onAction="#onConnexionButtonClick" text="Connexion" />
        <Button fx:id="btnMotDePasseOublie" layoutX="74.0" layoutY="420.0" onAction="#onMotDePasseOublieButtonClick" text="Mot de passe oublié" />
    
           <Label fx:id="motDePasseOublie" layoutX="195.3333282470703" layoutY="468.6666564941406" />

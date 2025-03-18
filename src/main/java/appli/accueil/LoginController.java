@@ -6,8 +6,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import model.Utilisateur;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class LoginController {
 
@@ -33,12 +36,12 @@ public class LoginController {
     private Label motDePasseOublie;
 
     @FXML
-    void onInscriptionButtonClick (ActionEvent event) throws IOException {
+    void onSInscrireButtonClick (ActionEvent event) throws IOException {
         StartApplication.changeScene("accueil/inscription");
     }
 
     @FXML
-    void onLoginButtonClick(ActionEvent event) {
+    void onConnexionButtonClick(ActionEvent event) {
         System.out.println("Email"+ emailField.getText());
         System.out.println("Password"+ motDePasseField.getText());
         String email = emailField.getText();
