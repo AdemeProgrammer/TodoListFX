@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import database.Database;
 import model.Utilisateur;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import repository.UtilisateurRepository;
 import java.sql.Connection;
 
@@ -61,7 +62,9 @@ void onInscriptionButtonClick (ActionEvent event) throws IOException {
             System.out.println("La confirmation n'est pas égal au mot de passe !");
             error.setText("La confirmation n'est pas égale au mot de passe !");
         }else{
-            Utilisateur user = new Utilisateur(nomField.getText(),prenomField.getText(),emailField.getText(),motDePasseField.getText(),"utilisateur");
+            BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+            String motDePasseHashe = passwordEncoder.encode(motDePasseField.getText());
+            Utilisateur user = new Utilisateur(nomField.getText(),prenomField.getText(),emailField.getText(),motDePasseHashe,"utilisateur");
             boolean estInscrit = repo.ajouterUtilisateur(user);
             if (estInscrit) {
                 System.out.println("Inscription réussie");

@@ -1,5 +1,6 @@
 package appli.accueil;
 
+import appli.accueil.InscriptionController;
 import appli.StartApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import model.Utilisateur;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import repository.UtilisateurRepository;
 import model.Utilisateur;
 import java.io.IOException;
@@ -44,27 +46,30 @@ public class LoginController {
 
     @FXML
     void onConnexionButtonClick(ActionEvent event) throws IOException {
-        System.out.println("Email"+ emailField.getText());
-        System.out.println("Password"+ motDePasseField.getText());
+        System.out.println("Email: " + emailField.getText());
+        System.out.println("Password: " + motDePasseField.getText());
+
         String email = emailField.getText();
-        String password =  motDePasseField.getText();
-        if(email.isEmpty() || password.isEmpty()) {
-           error.setText("Veuillez remplir tous les champs");
-        }else{
+        String password = motDePasseField.getText();
+
+        if (email.isEmpty() || password.isEmpty()) {
+            error.setText("Veuillez remplir tous les champs");
+        } else {
             Utilisateur user = repo.getUtilisateurParEmail(email);
             if (user == null) {
                 error.setText("Les informations fournies ne vous permettent pas de vous identifier !");
-
-            }else if (!user.getMotDePasse().equals(password)) {
-                error.setText("Veuillez remplir tous les champs");
-            }else {
-                error.setText("Connexion réussie !");
-                System.out.println("Connexion réussie");
-                System.out.println("Petite redirection des familles...");
-                StartApplication.changeScene("accueil/main");
+            } else {
+                BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+                if (!passwordEncoder.matches(password, user.getMotDePasse())) {
+                    error.setText("Le mot de passe est incorrect");
+                } else {
+                    error.setText("Connexion réussie !");
+                    System.out.println("Connexion réussie");
+                    System.out.println("Petite redirection des familles...");
+                    StartApplication.changeScene("accueil/main");
+                }
             }
         }
-
     }
 
     @FXML

@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="276031f1-2f0d-48f4-ad58-fd5f1cef2466" name="Changes" comment="[feat] Connexion avec BDD fonctionnelle">
-      <change afterPath="$PROJECT_DIR$/src/main/java/appli/accueil/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/appli/accueil/mainView.fxml" afterDir="false" />
+    <list default="true" id="276031f1-2f0d-48f4-ad58-fd5f1cef2466" name="Changes" comment="[feat] CRUD + MainController&#10;&#10;Lorsque l'on se connecte et que l'utilisateur est trouvé, on est regirigé vers la page Main.&#10;La liste des utilisateurs, la modification du compte et la suppression du compte ont été faites.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/session/SessionUtilisateur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appli/accueil/InscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appli/accueil/InscriptionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appli/accueil/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appli/accueil/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/UtilisateurRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/UtilisateurRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/appli/accueil/loginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/appli/accueil/loginView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -171,7 +172,7 @@
       <workItem from="1742283793452" duration="12822000" />
       <workItem from="1742301689353" duration="43000" />
       <workItem from="1742308939477" duration="5962000" />
-      <workItem from="1742474194853" duration="4218000" />
+      <workItem from="1742474194853" duration="7814000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] Avancement dans le projet">
       <option name="closed" value="true" />
@@ -237,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742312910517</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[feat] CRUD + MainController&#10;&#10;Lorsque l'on se connecte et que l'utilisateur est trouvé, on est regirigé vers la page Main.&#10;La liste des utilisateurs, la modification du compte et la suppression du compte ont été faites.">
+      <option name="closed" value="true" />
+      <created>1742478743136</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742478743136</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +261,8 @@
     <MESSAGE value="[feat]Intégration de MySQL au sein d’un &#10;      projet JAVA" />
     <MESSAGE value="[feat] Inscription avec BDD fonctionnelle" />
     <MESSAGE value="[feat] Connexion avec BDD fonctionnelle" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] Connexion avec BDD fonctionnelle" />
+    <MESSAGE value="[feat] CRUD + MainController&#10;&#10;Lorsque l'on se connecte et que l'utilisateur est trouvé, on est regirigé vers la page Main.&#10;La liste des utilisateurs, la modification du compte et la suppression du compte ont été faites." />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] CRUD + MainController&#10;&#10;Lorsque l'on se connecte et que l'utilisateur est trouvé, on est regirigé vers la page Main.&#10;La liste des utilisateurs, la modification du compte et la suppression du compte ont été faites." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
