@@ -62,12 +62,12 @@ public class UtilisateurRepository {
 
     public void supprimerUtilisateurParEmail(String email) {
         String sql = "DELETE FROM utilisateur WHERE email = ?";
-        System.out.println(sql);
+        System.out.println("L'utilisateur a bien été supprimé!");
     }
 
     public void mettreAJourUtilisateur(Utilisateur utilisateur) {
         String sql = "UPDATE utilisateurs SET nom = ?, prenom = ?, mdp = ?, role = ? WHERE email = ?";
-        System.out.println(sql);
+        System.out.println("L'utilisateur a été mis à jour !");
     }
 
     public ArrayList<Utilisateur> getTousLesUtilisateurs() {
@@ -75,6 +75,7 @@ public class UtilisateurRepository {
         System.out.println(sql);
         return null;
     }
+
     public class InscriptionController {
         private UtilisateurRepository utilisateurRepository = new UtilisateurRepository();
     }
