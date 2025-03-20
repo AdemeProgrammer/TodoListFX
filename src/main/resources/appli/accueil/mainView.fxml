@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.MainController">
+   <children>
+      <Label layoutX="146.0" layoutY="14.0" text="Bienvenue dans le Main !">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDeconnexion" layoutX="247.0" layoutY="229.0" mnemonicParsing="false" onAction="#onDeconnexionButtonClick" text="Déconnexion" />
+      <Button fx:id="btnListe" layoutX="212.0" layoutY="187.0" mnemonicParsing="false" onAction="#onListeButtonClick" text="Voir la liste des utilisateurs" />
+      <Button fx:id="btnSuppression" layoutX="226.0" layoutY="145.0" mnemonicParsing="false" onAction="#onSupressionButtonClick" text="Supprimer le compte" />
+      <Button fx:id="btnModif" layoutX="231.0" layoutY="107.0" mnemonicParsing="false" onAction="#onModifButtonClick" text="Modifier le compte" />
+   </children>
+</AnchorPane>

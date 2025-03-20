@@ -7,6 +7,8 @@ import model.Utilisateur;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Connection;
+import java.util.ArrayList;
+
 import appli.accueil.InscriptionController;
 
 public class UtilisateurRepository {
@@ -55,6 +57,22 @@ public class UtilisateurRepository {
         }catch (SQLException e){
             System.out.println("Erreur lors de l'utilisateur : " + e.getMessage());
         }
+        return null;
+    }
+
+    public void supprimerUtilisateurParEmail(String email) {
+        String sql = "DELETE FROM utilisateur WHERE email = ?";
+        System.out.println(sql);
+    }
+
+    public void mettreAJourUtilisateur(Utilisateur utilisateur) {
+        String sql = "UPDATE utilisateurs SET nom = ?, prenom = ?, mdp = ?, role = ? WHERE email = ?";
+        System.out.println(sql);
+    }
+
+    public ArrayList<Utilisateur> getTousLesUtilisateurs() {
+        String sql = "SELECT * FROM utilisateur";
+        System.out.println(sql);
         return null;
     }
     public class InscriptionController {

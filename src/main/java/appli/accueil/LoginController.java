@@ -43,7 +43,7 @@ public class LoginController {
     }
 
     @FXML
-    void onConnexionButtonClick(ActionEvent event) {
+    void onConnexionButtonClick(ActionEvent event) throws IOException {
         System.out.println("Email"+ emailField.getText());
         System.out.println("Password"+ motDePasseField.getText());
         String email = emailField.getText();
@@ -61,6 +61,7 @@ public class LoginController {
                 error.setText("Connexion réussie !");
                 System.out.println("Connexion réussie");
                 System.out.println("Petite redirection des familles...");
+                StartApplication.changeScene("accueil/main");
             }
         }
 
