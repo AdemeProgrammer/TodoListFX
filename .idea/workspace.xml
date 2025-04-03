@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="276031f1-2f0d-48f4-ad58-fd5f1cef2466" name="Changes" comment="[feat] Ajout de Session &#10;&#10;Ajout de la session" />
+    <list default="true" id="276031f1-2f0d-48f4-ad58-fd5f1cef2466" name="Changes" comment="[fix] Légère modifications&#10;&#10;Juste des petites modifications de sout.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/session/SessionUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/session/SessionUtilisateur.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +167,8 @@
       <workItem from="1742283793452" duration="12822000" />
       <workItem from="1742301689353" duration="43000" />
       <workItem from="1742308939477" duration="5962000" />
-      <workItem from="1742474194853" duration="8214000" />
+      <workItem from="1742474194853" duration="9530000" />
+      <workItem from="1743680511075" duration="623000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] Avancement dans le projet">
       <option name="closed" value="true" />
@@ -254,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742483336300</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[fix] Légère modifications&#10;&#10;Juste des petites modifications de sout.">
+      <option name="closed" value="true" />
+      <created>1742483817997</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742483817997</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +284,8 @@
     <MESSAGE value="[feat] CRUD + MainController&#10;&#10;Lorsque l'on se connecte et que l'utilisateur est trouvé, on est regirigé vers la page Main.&#10;La liste des utilisateurs, la modification du compte et la suppression du compte ont été faites." />
     <MESSAGE value="[feat] Ajout mdp hash &#10;&#10;Maintenant, le mot de passe est hashé (l'inscription et la connexion fonctionne avec le mot de passe hashé)" />
     <MESSAGE value="[feat] Ajout de Session &#10;&#10;Ajout de la session" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] Ajout de Session &#10;&#10;Ajout de la session" />
+    <MESSAGE value="[fix] Légère modifications&#10;&#10;Juste des petites modifications de sout." />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] Légère modifications&#10;&#10;Juste des petites modifications de sout." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
