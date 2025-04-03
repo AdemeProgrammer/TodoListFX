@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="276031f1-2f0d-48f4-ad58-fd5f1cef2466" name="Changes" comment="[fix] Légère modifications&#10;&#10;Juste des petites modifications de sout.">
+    <list default="true" id="276031f1-2f0d-48f4-ad58-fd5f1cef2466" name="Changes" comment="[feat] SessionUtilisateur&#10;&#10;TP3 : la sessionUtilisateur a été créée et est normalement fonctionnelle.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/appli/accueil/DeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/appli/accueil/UpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/appli/accueil/deleteView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/appli/accueil/updateView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appli/accueil/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appli/accueil/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/appli/accueil/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appli/accueil/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/UtilisateurRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/UtilisateurRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/session/SessionUtilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/session/SessionUtilisateur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -168,7 +175,7 @@
       <workItem from="1742301689353" duration="43000" />
       <workItem from="1742308939477" duration="5962000" />
       <workItem from="1742474194853" duration="9530000" />
-      <workItem from="1743680511075" duration="623000" />
+      <workItem from="1743680511075" duration="8911000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] Avancement dans le projet">
       <option name="closed" value="true" />
@@ -266,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742483817997</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[feat] SessionUtilisateur&#10;&#10;TP3 : la sessionUtilisateur a été créée et est normalement fonctionnelle.">
+      <option name="closed" value="true" />
+      <created>1743681355777</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1743681355777</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +300,19 @@
     <MESSAGE value="[feat] Ajout mdp hash &#10;&#10;Maintenant, le mot de passe est hashé (l'inscription et la connexion fonctionne avec le mot de passe hashé)" />
     <MESSAGE value="[feat] Ajout de Session &#10;&#10;Ajout de la session" />
     <MESSAGE value="[fix] Légère modifications&#10;&#10;Juste des petites modifications de sout." />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] Légère modifications&#10;&#10;Juste des petites modifications de sout." />
+    <MESSAGE value="[feat] SessionUtilisateur&#10;&#10;TP3 : la sessionUtilisateur a été créée et est normalement fonctionnelle." />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] SessionUtilisateur&#10;&#10;TP3 : la sessionUtilisateur a été créée et est normalement fonctionnelle." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/appli/accueil/UpdateController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

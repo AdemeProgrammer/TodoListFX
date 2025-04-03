@@ -1,8 +1,11 @@
 package appli.accueil;
 
+import appli.StartApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+
+import java.io.IOException;
 
 public class MainController {
 
@@ -29,13 +32,13 @@ public class MainController {
     }
 
     @FXML
-    void onModifButtonClick(ActionEvent event) {
-
+    void onModifButtonClick(ActionEvent event) throws IOException {
+        StartApplication.changeScene("accueil/update");
     }
 
     @FXML
-    void onSupressionButtonClick(ActionEvent event) {
-
+    void onSupressionButtonClick(ActionEvent event) throws IOException {
+        StartApplication.changeScene("accueil/delete");
     }
 
 }

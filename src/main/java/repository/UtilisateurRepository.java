@@ -9,8 +9,6 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import java.util.ArrayList;
 
-import appli.accueil.InscriptionController;
-
 public class UtilisateurRepository {
     private Connection cnx;
     public UtilisateurRepository() {
@@ -60,14 +58,35 @@ public class UtilisateurRepository {
         return null;
     }
 
-    public void supprimerUtilisateurParEmail(String email) {
+    public boolean supprimerUtilisateurParEmail(String email) {
         String sql = "DELETE FROM utilisateur WHERE email = ?";
-        System.out.println("L'utilisateur a bien été supprimé!");
+        try {
+            PreparedStatement stmt = this.cnx.prepareStatement(sql);
+            stmt.setString(1, email);
+            stmt.executeUpdate();
+            System.out.println("Utilisateur supprimé avec succès !");
+            return true;
+        } catch (SQLException e) {
+            System.out.println("Erreur lors de la suppression de l'utilisateur : " + e.getMessage());
+        }
+        return false;
     }
 
-    public void mettreAJourUtilisateur(Utilisateur utilisateur) {
-        String sql = "UPDATE utilisateurs SET nom = ?, prenom = ?, mdp = ?, role = ? WHERE email = ?";
-        System.out.println("L'utilisateur a été mis à jour !");
+    public boolean mettreAJourUtilisateur(Utilisateur utilisateur) {
+        String sql = "UPDATE utilisateur SET nom = ?, prenom = ?, mot_de_passe = ? WHERE email = ?";
+        try {
+            PreparedStatement stmt = this.cnx.prepareStatement(sql);
+            stmt.setString(1, utilisateur.getNom());
+            stmt.setString(2, utilisateur.getPrenom());
+            stmt.setString(3, utilisateur.getMotDePasse());
+            stmt.setString(4, utilisateur.getEmail());
+            stmt.executeUpdate();
+            System.out.println("Utilisateur mis à jour avec succès !");
+            return true;
+        } catch (SQLException e) {
+            System.out.println("Erreur lors de la mise à jour de l'utilisateur : " + e.getMessage());
+        }
+        return false;
     }
 
     public ArrayList<Utilisateur> getTousLesUtilisateurs() {
@@ -77,6 +96,10 @@ public class UtilisateurRepository {
     }
 
     public class InscriptionController {
+        private UtilisateurRepository utilisateurRepository = new UtilisateurRepository();
+    }
+
+    public class UpdateController {
         private UtilisateurRepository utilisateurRepository = new UtilisateurRepository();
     }
 }

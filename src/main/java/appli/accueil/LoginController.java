@@ -14,6 +14,7 @@ import model.Utilisateur;
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import session.SessionUtilisateur;
 
 public class LoginController {
     private UtilisateurRepository repo= new UtilisateurRepository();
@@ -66,6 +67,7 @@ public class LoginController {
                     error.setText("Connexion réussie !");
                     System.out.println("Connexion réussie");
                     System.out.println("Petite redirection des familles...");
+                    SessionUtilisateur.getInstance().sauvegardeSession(user);
                     StartApplication.changeScene("accueil/main");
                 }
             }
