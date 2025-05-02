@@ -1,16 +1,15 @@
 package repository;
 
 import database.Database;
-import java.sql.PreparedStatement;
 import model.Utilisateur;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Connection;
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class UtilisateurRepository {
     private Connection cnx;
+
     public UtilisateurRepository() {
         this.cnx = Database.getConnexion();
     }
@@ -35,13 +34,12 @@ public class UtilisateurRepository {
 
     public Utilisateur getUtilisateurParEmail(String email) {
         String sql = "SELECT * FROM utilisateur WHERE email = ?";
-        try{
+        try {
             PreparedStatement stmt = this.cnx.prepareStatement(sql);
-            stmt.setString(1,email);
+            stmt.setString(1, email);
             ResultSet rs = stmt.executeQuery();
-            if(rs.next()){
-                System.out.println("Utilisateur trouvé ! Let's goooooo !");
-                Utilisateur user = new Utilisateur(
+            if (rs.next()) {
+                return new Utilisateur(
                         rs.getInt("id_utilisateur"),
                         rs.getString("nom"),
                         rs.getString("prenom"),
@@ -49,11 +47,9 @@ public class UtilisateurRepository {
                         rs.getString("mot_de_passe"),
                         rs.getString("role")
                 );
-                return user;
             }
-            System.out.println("Utilisateur non trouvé !");
-        }catch (SQLException e){
-            System.out.println("Erreur lors de l'utilisateur : " + e.getMessage());
+        } catch (SQLException e) {
+            System.out.println("Erreur lors de la récupération de l'utilisateur : " + e.getMessage());
         }
         return null;
     }
@@ -89,21 +85,28 @@ public class UtilisateurRepository {
         return false;
     }
 
-    public ArrayList<Utilisateur> getTousLesUtilisateurs() {
+    public List<Utilisateur> findAll() {
+        List<Utilisateur> utilisateurs = new ArrayList<>();
         String sql = "SELECT * FROM utilisateur";
-        System.out.println(sql);
-        return null;
-    }
+        try {
+            PreparedStatement stmt = this.cnx.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
 
-    public class InscriptionController {
-        private UtilisateurRepository utilisateurRepository = new UtilisateurRepository();
-    }
+            while (rs.next()) {
+                Utilisateur user = new Utilisateur(
+                        rs.getInt("id_utilisateur"),
+                        rs.getString("nom"),
+                        rs.getString("prenom"),
+                        rs.getString("email"),
+                        rs.getString("mot_de_passe"),
+                        rs.getString("role")
+                );
+                utilisateurs.add(user);
+            }
+        } catch (SQLException e) {
+            System.out.println("Erreur lors de la récupération des utilisateurs : " + e.getMessage());
+        }
 
-    public class UpdateController {
-        private UtilisateurRepository utilisateurRepository = new UtilisateurRepository();
-    }
-
-    public class DeleteController {
-        private UtilisateurRepository utilisateurRepository = new UtilisateurRepository();
+        return utilisateurs;
     }
 }

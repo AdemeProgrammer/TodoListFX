@@ -31,8 +31,8 @@ public class MainController {
     }
 
     @FXML
-    void onListeButtonClick(ActionEvent event) {
-
+    void onListeButtonClick(ActionEvent event) throws IOException {
+        StartApplication.changeScene("accueil/gestionUser");
     }
 
     @FXML
