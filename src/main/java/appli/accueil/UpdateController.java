@@ -52,17 +52,18 @@ public class UpdateController {
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
             String motDePasseHashe = passwordEncoder.encode(motDePasseField.getText());
             Utilisateur user = new Utilisateur(nomField.getText(), prenomField.getText(), emailField.getText(), motDePasseHashe, "utilisateur");
-//            boolean estUpdate = repo.mettreAJourUtilisateur(email);
-//            if (estUpdate) {
+            UtilisateurRepository repo= new UtilisateurRepository();
+            boolean estUpdate = repo.mettreAJourUtilisateur(user);
+            if (estUpdate) {
                 System.out.println("Modification de compte réussie");
                 error.setText("Modification de compte réussie !");
                 StartApplication.changeScene("accueil/main");
-//            } else {
+            } else {
                 System.out.println("Erreur lors de la modification de compte");
                 error.setText("Erreur lors de la modification de compte");
             }
         }
     }
-
+}
 
 

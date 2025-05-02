@@ -4,6 +4,7 @@ import appli.StartApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import session.SessionUtilisateur;
 
 import java.io.IOException;
 
@@ -22,8 +23,11 @@ public class MainController {
     private Button btnSuppression;
 
     @FXML
-    void onDeconnexionButtonClick(ActionEvent event) {
-
+    void onDeconnexionButtonClick(ActionEvent event) throws IOException {
+        SessionUtilisateur.getInstance().deconnecter();
+        System.out.println("Utilisateur déconnecté.");
+        StartApplication.changeScene("accueil/login");
+        //Petite redirection des familles vers la page de connexion
     }
 
     @FXML

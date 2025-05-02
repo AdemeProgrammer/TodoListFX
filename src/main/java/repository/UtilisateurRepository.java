@@ -102,4 +102,8 @@ public class UtilisateurRepository {
     public class UpdateController {
         private UtilisateurRepository utilisateurRepository = new UtilisateurRepository();
     }
+
+    public class DeleteController {
+        private UtilisateurRepository utilisateurRepository = new UtilisateurRepository();
+    }
 }
