@@ -45,4 +45,12 @@ public class MainController {
         StartApplication.changeScene("accueil/delete");
     }
 
+    @FXML
+    void onGestionListeButtonClick(ActionEvent event) throws IOException {
+        StartApplication.changeScene("accueil/gestionListeView");
+    }
+    @FXML
+    void onAjoutListeButtonClick(ActionEvent event) throws IOException {
+        StartApplication.changeScene("accueil/ajoutListeView");
+    }
 }

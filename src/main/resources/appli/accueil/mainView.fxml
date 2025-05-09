@@ -12,7 +12,9 @@
             <Font size="28.0" />
          </font>
       </Label>
-      <Button fx:id="btnDeconnexion" layoutX="247.0" layoutY="229.0" mnemonicParsing="false" onAction="#onDeconnexionButtonClick" text="Déconnexion" />
+      <Button fx:id="btnAjoutListe" layoutX="239.0" layoutY="69.0" mnemonicParsing="false" onAction="#onAjoutListeButtonClick" text="Ajouter une liste" />
+      <Button fx:id="btnGestionListe" layoutX="217.0" layoutY="226.0" mnemonicParsing="false" onAction="#onGestionListeButtonClick" text="Voir mes listes de tâches" />
+      <Button fx:id="btnDeconnexion" layoutX="247.0" layoutY="268.0" mnemonicParsing="false" onAction="#onDeconnexionButtonClick" text="Déconnexion" />
       <Button fx:id="btnListe" layoutX="212.0" layoutY="187.0" mnemonicParsing="false" onAction="#onListeButtonClick" text="Voir la liste des utilisateurs" />
       <Button fx:id="btnSuppression" layoutX="226.0" layoutY="145.0" mnemonicParsing="false" onAction="#onSupressionButtonClick" text="Supprimer le compte" />
       <Button fx:id="btnModif" layoutX="231.0" layoutY="107.0" mnemonicParsing="false" onAction="#onModifButtonClick" text="Modifier le compte" />

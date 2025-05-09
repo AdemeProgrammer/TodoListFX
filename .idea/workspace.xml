@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="276031f1-2f0d-48f4-ad58-fd5f1cef2466" name="Changes" comment="[feat]Ajout de la SessionUtilisateur&#10;&#10;Lorsque l'utilisateur se connecte, cela lance sa session et il peut se déconncter, ce qui détruit la session.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/appli/accueil/GestionUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/appli/accueil/gestionUserView.fxml" afterDir="false" />
+    <list default="true" id="276031f1-2f0d-48f4-ad58-fd5f1cef2466" name="Changes" comment="[feat]Ajout du TableView&#10;&#10;Le tableView est maintenant fonctionnel.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Tache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/ListeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/appli/accueil/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/appli/accueil/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/UtilisateurRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/UtilisateurRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Liste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Liste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/appli/accueil/mainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/appli/accueil/mainView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +175,8 @@
       <workItem from="1743680511075" duration="11047000" />
       <workItem from="1745771291606" duration="121000" />
       <workItem from="1746166146070" duration="9343000" />
+      <workItem from="1746178374574" duration="391000" />
+      <workItem from="1746747521137" duration="4124000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] Avancement dans le projet">
       <option name="closed" value="true" />
@@ -296,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746168642003</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="[feat]Ajout du TableView&#10;&#10;Le tableView est maintenant fonctionnel.">
+      <option name="closed" value="true" />
+      <created>1746178412401</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746178412401</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +328,8 @@
     <MESSAGE value="[feat] SessionUtilisateur&#10;&#10;TP3 : la sessionUtilisateur a été créée et est normalement fonctionnelle." />
     <MESSAGE value="[feat]Ajout pages delete/update&#10;&#10;Le delete et l'update dans UtilisateurRepository ont été ajoutés et sont fonctionnels + créations des formulaires de suppression et de modification" />
     <MESSAGE value="[feat]Ajout de la SessionUtilisateur&#10;&#10;Lorsque l'utilisateur se connecte, cela lance sa session et il peut se déconncter, ce qui détruit la session." />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat]Ajout de la SessionUtilisateur&#10;&#10;Lorsque l'utilisateur se connecte, cela lance sa session et il peut se déconncter, ce qui détruit la session." />
+    <MESSAGE value="[feat]Ajout du TableView&#10;&#10;Le tableView est maintenant fonctionnel." />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat]Ajout du TableView&#10;&#10;Le tableView est maintenant fonctionnel." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
