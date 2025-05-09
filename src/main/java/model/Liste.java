@@ -1,6 +1,31 @@
 package model;
 
 public class Liste {
+    private int idListe;
+    private String nom;
+    private int idUtilisateur;
+
+    public Liste(int idListe, String nom, int idUtilisateur) {
+        this.idListe = idListe;
+        this.nom = nom;
+        this.idUtilisateur = idUtilisateur;
+    }
+
+    public Liste(String nom, int idUtilisateur) {
+        this.nom = nom;
+        this.idUtilisateur = idUtilisateur;
+    }
+
+    public Liste(int idListe, String nom) {
+        this.idListe = idListe;
+        this.nom = nom;
+    }
+
+    public Liste(String nom) {
+        this.nom = nom;
+    }
+
+    // Getters / Setters
     public int getIdListe() {
         return idListe;
     }
@@ -17,12 +42,12 @@ public class Liste {
         this.nom = nom;
     }
 
-    private int idListe;
-    private String nom;
+    public int getIdUtilisateur() {
+        return idUtilisateur;
+    }
 
-    public Liste(int idListe, String nom) {
-        this.idListe = idListe;
-        this.nom = nom;
+    public void setIdUtilisateur(int idUtilisateur) {
+        this.idUtilisateur = idUtilisateur;
     }
 
     @Override
@@ -30,6 +55,7 @@ public class Liste {
         return "Liste{" +
                 "idListe=" + idListe +
                 ", nom='" + nom + '\'' +
+                ", idUtilisateur=" + idUtilisateur +
                 '}';
     }
 }
