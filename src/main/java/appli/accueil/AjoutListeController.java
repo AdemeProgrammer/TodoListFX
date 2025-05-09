@@ -47,7 +47,7 @@ public class AjoutListeController {
         boolean ajoutOK = listeRepository.ajouterListe(nouvelleListe);
 
         if (ajoutOK) {
-            StartApplication.changeScene("accueil/gestionListeView");
+            StartApplication.changeScene("accueil/gestionListe");
         } else {
             afficherAlerte("Erreur lors de l'ajout de la liste.");
         }
@@ -55,7 +55,7 @@ public class AjoutListeController {
 
     @FXML
     void onAnnulerClick() throws IOException {
-        StartApplication.changeScene("accueil/gestionListeView");
+        StartApplication.changeScene("accueil/main");
     }
 
     private void afficherAlerte(String message) {

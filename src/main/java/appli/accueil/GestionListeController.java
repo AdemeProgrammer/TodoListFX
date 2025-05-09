@@ -76,7 +76,6 @@ public class GestionListeController implements Initializable {
 
         int idUtilisateur = SessionUtilisateur.getInstance().getUtilisateur().getIdUtilisateur();
 
-        // Charger les listes de cet utilisateur
         ListeRepository listeRepository = new ListeRepository();
         List<Liste> listes = listeRepository.getListesParUtilisateur(idUtilisateur);
 

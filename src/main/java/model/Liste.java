@@ -25,7 +25,6 @@ public class Liste {
         this.nom = nom;
     }
 
-    // Getters / Setters
     public int getIdListe() {
         return idListe;
     }
