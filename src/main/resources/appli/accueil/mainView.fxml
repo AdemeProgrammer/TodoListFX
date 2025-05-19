@@ -5,18 +5,54 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.MainController">
+<AnchorPane prefHeight="450.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="appli.accueil.MainController">
+
    <children>
-      <Label layoutX="146.0" layoutY="14.0" text="Bienvenue dans le Main !">
+      <!-- Titre centré -->
+      <Label layoutX="110.0" layoutY="20.0" text="Bienvenue dans le tableau de bord !">
          <font>
-            <Font size="28.0" />
+            <Font size="26.0"/>
          </font>
       </Label>
-      <Button fx:id="btnAjoutListe" layoutX="239.0" layoutY="69.0" mnemonicParsing="false" onAction="#onAjoutListeButtonClick" text="Ajouter une liste" />
-      <Button fx:id="btnGestionListe" layoutX="217.0" layoutY="226.0" mnemonicParsing="false" onAction="#onGestionListeButtonClick" text="Voir mes listes de tâches" />
-      <Button fx:id="btnDeconnexion" layoutX="247.0" layoutY="268.0" mnemonicParsing="false" onAction="#onDeconnexionButtonClick" text="Déconnexion" />
-      <Button fx:id="btnListe" layoutX="212.0" layoutY="187.0" mnemonicParsing="false" onAction="#onListeButtonClick" text="Voir la liste des utilisateurs" />
-      <Button fx:id="btnSuppression" layoutX="226.0" layoutY="145.0" mnemonicParsing="false" onAction="#onSupressionButtonClick" text="Supprimer le compte" />
-      <Button fx:id="btnModif" layoutX="231.0" layoutY="107.0" mnemonicParsing="false" onAction="#onModifButtonClick" text="Modifier le compte" />
+
+      <!-- Section gestion des listes et tâches -->
+      <Button fx:id="btnAjoutListe" layoutX="200.0" layoutY="80.0"
+              mnemonicParsing="false" onAction="#onAjoutListeButtonClick"
+              text="Ajouter une liste" prefWidth="200"/>
+
+      <Button fx:id="btnAjoutTache" layoutX="200.0" layoutY="120.0"
+              mnemonicParsing="false" onAction="#onAjoutTacheButtonClick"
+              text="Ajouter une tâche" prefWidth="200"/>
+
+      <Button fx:id="btnGestionListe" layoutX="200.0" layoutY="160.0"
+              mnemonicParsing="false" onAction="#onGestionListeButtonClick"
+              text="Voir mes listes de tâches" prefWidth="200"/>
+
+      <Button fx:id="btnGestionTache" layoutX="200.0" layoutY="200.0"
+              mnemonicParsing="false" onAction="#onGestionTacheButtonClick"
+              text="Voir mes tâches" prefWidth="200"/>
+
+      <!-- Ligne de séparation visuelle -->
+      <Label layoutX="80.0" layoutY="250.0" prefWidth="440.0" text="___________________________________________"/>
+
+      <!-- Section compte utilisateur -->
+      <Button fx:id="btnModif" layoutX="200.0" layoutY="270.0"
+              mnemonicParsing="false" onAction="#onModifButtonClick"
+              text="Modifier le compte" prefWidth="200"/>
+
+      <Button fx:id="btnSuppression" layoutX="200.0" layoutY="310.0"
+              mnemonicParsing="false" onAction="#onSupressionButtonClick"
+              text="Supprimer le compte" prefWidth="200"/>
+
+      <Button fx:id="btnListe" layoutX="200.0" layoutY="350.0"
+              mnemonicParsing="false" onAction="#onListeButtonClick"
+              text="Voir la liste des utilisateurs" prefWidth="200"/>
+
+      <Button fx:id="btnDeconnexion" layoutX="200.0" layoutY="390.0"
+              mnemonicParsing="false" onAction="#onDeconnexionButtonClick"
+              text="Déconnexion" prefWidth="200"/>
    </children>
 </AnchorPane>

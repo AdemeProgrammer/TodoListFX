@@ -36,6 +36,17 @@ public class MainController {
     }
 
     @FXML
+    void onAjoutTacheButtonClick() throws IOException {
+        StartApplication.changeScene("accueil/ajoutTacheView");
+    }
+
+    @FXML
+    void onGestionTacheButtonClick() throws IOException {
+        StartApplication.changeScene("accueil/gestionTacheView");
+    }
+
+
+    @FXML
     void onModifButtonClick(ActionEvent event) throws IOException {
         StartApplication.changeScene("accueil/update");
     }
